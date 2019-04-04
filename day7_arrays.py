@@ -20,4 +20,5 @@ if __name__ == '__main__':
     arr = list(map(int, input().rstrip().split()))
     # my code start from here
     new_arr = arr[::-1]
-    print(' '.join(str(e) for e in new_arr))
+
+    print(' '.join(str(i) for i in new_arr))
