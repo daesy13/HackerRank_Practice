@@ -33,7 +33,25 @@
 # phoneBook = {'sam': 99912222, 'tom': 11122222, 'harry': 12299933}
 
 # Enter your code here
+import sys
 
+n = int(sys.stdin.readline().strip())
+
+phone_book = dict()
+
+for i in range (n):
+    entry = sys.stdin.readline().strip().split(' ')
+    phone_book[entry[0]] = entry[1]
+
+query = sys.stdin.readline().strip()
+
+while query:
+    phone_number = phone_book.get(query)
+    if phone_number:
+        print(query + '=' + phone_number)
+    else:
+        print('Not found')
+    query = sys.stdin.readline().strip
 
 
 
